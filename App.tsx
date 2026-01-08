@@ -1,77 +1,77 @@
 
 import React, { lazy, Suspense, useState, useEffect } from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import FeaturedApps from './components/FeaturedApps';
-import MarketplacePreview from './components/MarketplacePreview';
-import SubmitCTA from './components/SubmitCTA';
-import Footer from './components/Footer';
-import ToastContainer from './components/ToastContainer';
-import { useApp } from './hooks/useApp';
-import AppFormModal from './components/AppFormModal';
-import { useMarketplace } from './hooks/useMarketplace';
-import { useToast } from './hooks/useToast';
-import { useI18n } from './hooks/useI18n';
-import { App as AppType, NewsPost, SiteContentKey, BilingualContent, ContactInfoContent, Project } from './types';
-import ContactPage from './components/ContactPage';
-import ChatWidget from './components/ChatWidget';
-import AppDetailModal from './components/AppDetailModal';
-import LoadingSpinner from './components/LoadingSpinner';
-import { useAuth } from './hooks/useAuth';
-import { useNews } from './hooks/useNews';
-import { useSiteContent } from './hooks/useSiteContent';
-import TermsOfServiceModal from './components/TermsOfServiceModal';
-import PrivacyPolicyModal from './components/PrivacyPolicyModal';
-import CompareFloatingBar from './components/CompareFloatingBar';
-import CookieConsent from './components/CookieConsent';
-import PromoCodeManagementModal from './components/PromoCodeManagementModal';
-import { useProjects } from './hooks/useProjects';
-import DeploymentModal from './components/DeploymentModal';
-import BackToTop from './components/BackToTop';
-import ContactFormModal from './components/ContactFormModal';
-import CampaignBanner from './components/CampaignBanner';
+import Header from './components/Header.tsx';
+import Hero from './components/Hero.tsx';
+import FeaturedApps from './components/FeaturedApps.tsx';
+import MarketplacePreview from './components/MarketplacePreview.tsx';
+import SubmitCTA from './components/SubmitCTA.tsx';
+import Footer from './components/Footer.tsx';
+import ToastContainer from './components/ToastContainer.tsx';
+import { useApp } from './hooks/useApp.ts';
+import AppFormModal from './components/AppFormModal.tsx';
+import { useMarketplace } from './hooks/useMarketplace.ts';
+import { useToast } from './hooks/useToast.ts';
+import { useI18n } from './hooks/useI18n.ts';
+import { App as AppType, NewsPost, SiteContentKey, BilingualContent, ContactInfoContent, Project } from './types.ts';
+import ContactPage from './components/ContactPage.tsx';
+import ChatWidget from './components/ChatWidget.tsx';
+import AppDetailModal from './components/AppDetailModal.tsx';
+import LoadingSpinner from './components/LoadingSpinner.tsx';
+import { useAuth } from './hooks/useAuth.ts';
+import { useNews } from './hooks/useNews.ts';
+import { useSiteContent } from './hooks/useSiteContent.ts';
+import TermsOfServiceModal from './components/TermsOfServiceModal.tsx';
+import PrivacyPolicyModal from './components/PrivacyPolicyModal.tsx';
+import CompareFloatingBar from './components/CompareFloatingBar.tsx';
+import CookieConsent from './components/CookieConsent.tsx';
+import PromoCodeManagementModal from './components/PromoCodeManagementModal.tsx';
+import { useProjects } from './hooks/useProjects.ts';
+import DeploymentModal from './components/DeploymentModal.tsx';
+import BackToTop from './components/BackToTop.tsx';
+import ContactFormModal from './components/ContactFormModal.tsx';
+import CampaignBanner from './components/CampaignBanner.tsx';
 
-const OrderConfirmation = lazy(() => import('./components/OrderConfirmation'));
-const CheckoutPage = lazy(() => import('./components/CheckoutPage'));
-const LoginPage = lazy(() => import('./components/LoginPage'));
-const SignupPage = lazy(() => import('./components/SignupPage'));
-const MarketplacePage = lazy(() => import('./components/MarketplacePage'));
-const AnalyticsDashboard = lazy(() => import('./components/AnalyticsDashboard'));
-const SiteManagementPage = lazy(() => import('./components/SiteManagementPage'));
-const AppManagementPage = lazy(() => import('./components/AppManagementPage'));
-const SplashScreen = lazy(() => import('./components/SplashScreen'));
-const BlogPage = lazy(() => import('./components/BlogPage'));
-const NewsManagementPage = lazy(() => import('./components/NewsManagementPage'));
-const NewsFormModal = lazy(() => import('./components/NewsFormModal'));
-const ContentEditModal = lazy(() => import('./components/ContentEditModal'));
-const BrandingEditModal = lazy(() => import('./components/BrandingEditModal'));
-const CareersPage = lazy(() => import('./components/CareersPage'));
-const PressPage = lazy(() => import('./components/PressPage'));
-const AboutPage = lazy(() => import('./components/AboutPage'));
-const AdminLoginPage = lazy(() => import('./components/AdminLoginPage'));
-const ProfilePage = lazy(() => import('./components/ProfilePage'));
-const ProjectsPage = lazy(() => import('./components/ProjectsPage'));
-const CustomAIDevelopmentPage = lazy(() => import('./components/CustomAIDevelopmentPage'));
-const CustomDevCTA = lazy(() => import('./components/CustomDevCTA'));
-const TrainingCTA = lazy(() => import('./components/TrainingCTA'));
-const AITrainingPage = lazy(() => import('./components/AITrainingPage'));
-const AdminDashboardPage = lazy(() => import('./components/AdminDashboardPage'));
-const ProjectManagementPage = lazy(() => import('./components/ProjectManagementPage'));
-const TrainingManagementPage = lazy(() => import('./components/TrainingManagementPage'));
-const UserManagementPage = lazy(() => import('./components/UserManagementPage'));
-const OrderManagementPage = lazy(() => import('./components/OrderManagementPage'));
-const ProjectFormModal = lazy(() => import('./components/ProjectFormModal'));
-const ChatManagementPage = lazy(() => import('./components/ChatManagementPage'));
-const CampaignManagementPage = lazy(() => import('./components/CampaignManagementPage'));
-const AIWebsiteDesigner = lazy(() => import('./components/AIWebsiteDesigner'));
-const CommissionManagementPage = lazy(() => import('./components/CommissionManagementPage'));
-const PartnerProgramPage = lazy(() => import('./components/PartnerProgramPage'));
+const OrderConfirmation = lazy(() => import('./components/OrderConfirmation.tsx'));
+const CheckoutPage = lazy(() => import('./components/CheckoutPage.tsx'));
+const LoginPage = lazy(() => import('./components/LoginPage.tsx'));
+const SignupPage = lazy(() => import('./components/SignupPage.tsx'));
+const MarketplacePage = lazy(() => import('./components/MarketplacePage.tsx'));
+const AnalyticsDashboard = lazy(() => import('./components/AnalyticsDashboard.tsx'));
+const SiteManagementPage = lazy(() => import('./components/SiteManagementPage.tsx'));
+const AppManagementPage = lazy(() => import('./components/AppManagementPage.tsx'));
+const SplashScreen = lazy(() => import('./components/SplashScreen.tsx'));
+const BlogPage = lazy(() => import('./components/BlogPage.tsx'));
+const NewsManagementPage = lazy(() => import('./components/NewsManagementPage.tsx'));
+const NewsFormModal = lazy(() => import('./components/NewsFormModal.tsx'));
+const ContentEditModal = lazy(() => import('./components/ContentEditModal.tsx'));
+const BrandingEditModal = lazy(() => import('./components/BrandingEditModal.tsx'));
+const CareersPage = lazy(() => import('./components/CareersPage.tsx'));
+const PressPage = lazy(() => import('./components/PressPage.tsx'));
+const AboutPage = lazy(() => import('./components/AboutPage.tsx'));
+const AdminLoginPage = lazy(() => import('./components/AdminLoginPage.tsx'));
+const ProfilePage = lazy(() => import('./components/ProfilePage.tsx'));
+const ProjectsPage = lazy(() => import('./components/ProjectsPage.tsx'));
+const CustomAIDevelopmentPage = lazy(() => import('./components/CustomAIDevelopmentPage.tsx'));
+const CustomDevCTA = lazy(() => import('./components/CustomDevCTA.tsx'));
+const TrainingCTA = lazy(() => import('./components/TrainingCTA.tsx'));
+const AITrainingPage = lazy(() => import('./components/AITrainingPage.tsx'));
+const AdminDashboardPage = lazy(() => import('./components/AdminDashboardPage.tsx'));
+const ProjectManagementPage = lazy(() => import('./components/ProjectManagementPage.tsx'));
+const TrainingManagementPage = lazy(() => import('./components/TrainingManagementPage.tsx'));
+const UserManagementPage = lazy(() => import('./components/UserManagementPage.tsx'));
+const OrderManagementPage = lazy(() => import('./components/OrderManagementPage.tsx'));
+const ProjectFormModal = lazy(() => import('./components/ProjectFormModal.tsx'));
+const ChatManagementPage = lazy(() => import('./components/ChatManagementPage.tsx'));
+const CampaignManagementPage = lazy(() => import('./components/CampaignManagementPage.tsx'));
+const AIWebsiteDesigner = lazy(() => import('./components/AIWebsiteDesigner.tsx'));
+const CommissionManagementPage = lazy(() => import('./components/CommissionManagementPage.tsx'));
+const PartnerProgramPage = lazy(() => import('./components/PartnerProgramPage.tsx'));
 
 
 const App: React.FC = () => {
-  const { 
-    view, 
-    isAppFormModalOpen, appToEdit, closeAppFormModal, 
+  const {
+    view,
+    isAppFormModalOpen, appToEdit, closeAppFormModal,
     isAppDetailModalOpen, selectedApp, closeAppDetailModal,
     isNewsFormModalOpen, newsPostToEdit, closeNewsFormModal,
     isProjectFormModalOpen, projectToEdit, closeProjectFormModal,
@@ -94,7 +94,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     console.log("%c AI Studio Marketplace v3.10.0 (Global Campaign Node) ", "background: #FF6A00; color: #000; font-weight: bold; padding: 4px; border-radius: 4px;");
-    
+
     try {
       if (sessionStorage.getItem('splash_seen')) {
         setShowSplash(false);
@@ -109,39 +109,39 @@ const App: React.FC = () => {
   const handleSplashComplete = () => {
     setShowSplash(false);
   };
-  
+
   const renderView = () => {
     const adminOnlyViews: (typeof view)[] = [
-        'analytics', 
-        'site_management', 
-        'app_management', 
-        'news_management', 
-        'admin_dashboard',
-        'project_management',
-        'training_management',
-        'user_management',
-        'order_management',
-        'promo_management',
-        'chat_management',
-        'campaign_management',
-        'commission_management'
+      'analytics',
+      'site_management',
+      'app_management',
+      'news_management',
+      'admin_dashboard',
+      'project_management',
+      'training_management',
+      'user_management',
+      'order_management',
+      'promo_management',
+      'chat_management',
+      'campaign_management',
+      'commission_management'
     ];
     const isAccessingAdminView = adminOnlyViews.includes(view);
 
     if (isAccessingAdminView && !isAdmin) {
-       return (
-          <>
-            <Hero />
-            <FeaturedApps />
-            <MarketplacePreview />
-            <CustomDevCTA />
-            <SubmitCTA />
-            <TrainingCTA />
-          </>
-        );
+      return (
+        <>
+          <Hero />
+          <FeaturedApps />
+          <MarketplacePreview />
+          <CustomDevCTA />
+          <SubmitCTA />
+          <TrainingCTA />
+        </>
+      );
     }
-    
-    switch(view) {
+
+    switch (view) {
       case 'marketplace':
         return (
           <>
@@ -217,7 +217,7 @@ const App: React.FC = () => {
         return null;
     }
   }
-  
+
   const handleSaveApp = (appData: AppType) => {
     if (appToEdit) {
       updateApp(appData);
@@ -228,7 +228,7 @@ const App: React.FC = () => {
     }
     closeAppFormModal();
   };
-  
+
   const handleSaveNewsPost = (postData: NewsPost) => {
     if (newsPostToEdit) {
       updateNewsPost(postData);
@@ -250,7 +250,7 @@ const App: React.FC = () => {
     }
     closeProjectFormModal();
   };
-  
+
   const handleSaveContent = (key: SiteContentKey, content: BilingualContent | ContactInfoContent) => {
     updateSiteContent(key, content);
     showToast(t('content_updated_successfully'), 'success');
@@ -259,18 +259,18 @@ const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen overflow-hidden text-[var(--text-main)] transition-colors duration-500">
-       {/* Dynamic Background Decorations */}
-       <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-purple-500 rounded-full blur-[120px] pointer-events-none z-[-1] opacity-[var(--glow-opacity)] transition-opacity duration-1000" />
-       <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-[#FF6A00] rounded-full blur-[120px] pointer-events-none z-[-1] opacity-[var(--glow-opacity)] transition-opacity duration-1000" />
-       <div className="fixed top-[40%] left-[30%] w-[40%] h-[40%] bg-blue-500 rounded-full blur-[150px] pointer-events-none z-[-1] opacity-[var(--glow-opacity)] transition-opacity duration-1000" />
+      {/* Dynamic Background Decorations */}
+      <div className="fixed top-[-20%] left-[-10%] w-[50%] h-[50%] bg-purple-500 rounded-full blur-[120px] pointer-events-none z-[-1] opacity-[var(--glow-opacity)] transition-opacity duration-1000" />
+      <div className="fixed bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-[#FF6A00] rounded-full blur-[120px] pointer-events-none z-[-1] opacity-[var(--glow-opacity)] transition-opacity duration-1000" />
+      <div className="fixed top-[40%] left-[30%] w-[40%] h-[40%] bg-blue-500 rounded-full blur-[150px] pointer-events-none z-[-1] opacity-[var(--glow-opacity)] transition-opacity duration-1000" />
 
-       <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
+      <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
         {showSplash && <SplashScreen onComplete={handleSplashComplete} />}
       </Suspense>
 
       <CampaignBanner />
       <Header onOpenPromo={() => setIsPromoModalOpen(true)} />
-      
+
       <main className="relative z-10 pt-24 sm:pt-28 pb-10">
         <Suspense fallback={<LoadingSpinner />}>
           {renderView()}
@@ -282,7 +282,7 @@ const App: React.FC = () => {
       <CompareFloatingBar />
       <CookieConsent />
       <BackToTop />
-      
+
       <AppFormModal
         isOpen={isAppFormModalOpen}
         onClose={closeAppFormModal}
@@ -294,40 +294,40 @@ const App: React.FC = () => {
         onClose={closeAppDetailModal}
         app={selectedApp}
       />
-      
+
       <TermsOfServiceModal isOpen={isTermsModalOpen} onClose={closeTermsModal} />
       <PrivacyPolicyModal isOpen={isPrivacyModalOpen} onClose={closePrivacyModal} />
       <PromoCodeManagementModal isOpen={isPromoModalOpen} onClose={() => setIsPromoModalOpen(false)} />
-      <DeploymentModal 
-        isOpen={isDeploymentModalOpen} 
-        onClose={closeDeploymentModal} 
+      <DeploymentModal
+        isOpen={isDeploymentModalOpen}
+        onClose={closeDeploymentModal}
         app={appToDeploy}
       />
       <ContactFormModal isOpen={isContactModalOpen} onClose={closeContactModal} />
-      
+
       <Suspense fallback={null}>
-          <NewsFormModal
-            isOpen={isNewsFormModalOpen}
-            onClose={closeNewsFormModal}
-            onSave={handleSaveNewsPost}
-            postToEdit={newsPostToEdit}
-          />
-          <ProjectFormModal 
-            isOpen={isProjectFormModalOpen}
-            onClose={closeProjectFormModal}
-            onSave={handleSaveProject}
-            projectToEdit={projectToEdit}
-          />
-          <ContentEditModal
-            isOpen={isContentEditModalOpen}
-            onClose={closeContentEditModal}
-            onSave={handleSaveContent}
-            contentToEdit={contentToEdit}
-          />
-          <BrandingEditModal 
-            isOpen={isBrandingModalOpen}
-            onClose={closeBrandingModal}
-          />
+        <NewsFormModal
+          isOpen={isNewsFormModalOpen}
+          onClose={closeNewsFormModal}
+          onSave={handleSaveNewsPost}
+          postToEdit={newsPostToEdit}
+        />
+        <ProjectFormModal
+          isOpen={isProjectFormModalOpen}
+          onClose={closeProjectFormModal}
+          onSave={handleSaveProject}
+          projectToEdit={projectToEdit}
+        />
+        <ContentEditModal
+          isOpen={isContentEditModalOpen}
+          onClose={closeContentEditModal}
+          onSave={handleSaveContent}
+          contentToEdit={contentToEdit}
+        />
+        <BrandingEditModal
+          isOpen={isBrandingModalOpen}
+          onClose={closeBrandingModal}
+        />
       </Suspense>
       <ChatWidget />
     </div>
