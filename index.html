@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  
+  <!-- Primary Meta Tags -->
+  <title>AI Studio Marketplace | Cửa hàng ứng dụng trí tuệ nhân tạo</title>
+  <meta name="title" content="AI Studio Marketplace | Future of AI">
+  <meta name="description" content="Khám phá và mua sắm các giải pháp AI hàng đầu: Từ thiết kế web AI đến tư vấn doanh nghiệp. Tích hợp Gemini 3.0 mạnh mẽ.">
+
+  <!-- Open Graph / Facebook / Zalo -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aistudio.dev/">
+  <meta property="og:title" content="AI Studio Marketplace | Future of AI">
+  <meta property="og:description" content="Chợ ứng dụng AI thế hệ mới tích hợp Gemini 3.0 Pro.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1200&auto=format&fit=crop">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="AI Studio Marketplace | Future of AI">
+  <meta property="twitter:description" content="Discover and deploy AI applications instantly.">
+
+  <!-- PWA & Mobile -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#050507">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+        --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+        --bg-main: #050507; 
+        --bg-card: #121214; 
+        --bg-glass: rgba(18, 18, 20, 0.9);
+        --border: rgba(255, 255, 255, 0.1);
+        --text-main: #FFFFFF;
+        --primary: #FF6A00;
+        --primary-gradient: linear-gradient(135deg, #FF6A00 0%, #FF8A00 100%);
+    }
+
+    [data-theme="light"] {
+        --bg-main: #F4F4F7;
+        --bg-card: #FFFFFF;
+        --bg-glass: rgba(255, 255, 255, 0.85);
+        --border: rgba(0, 0, 0, 0.08);
+        --text-main: #1C1C1E;
+        --primary: #E65C00;
+    }
+
+    html { -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; height: 100%; }
+    body { font-family: var(--font-main); background-color: var(--bg-main); color: var(--text-main); overflow-x: hidden; padding-bottom: env(safe-area-inset-bottom); min-height: 100%; display: flex; flex-direction: column; }
+    #root { flex: 1; display: flex; flex-direction: column; }
+    .ios-glass { background: var(--bg-glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border); }
+    .ios-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 24px; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .custom-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(128, 128, 128, 0.2); border-radius: 10px; }
+    .ios-btn { display: inline-flex; align-items: center; justify-content: center; font-weight: 700; border-radius: 14px; cursor: pointer; transition: all 0.2s; }
+    .ios-btn-primary { background: var(--primary-gradient); color: #000; }
+    .pulse-glow { animation: pulseGlow 2s infinite; }
+    @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 20px rgba(255, 106, 0, 0.2); } 50% { box-shadow: 0 0 40px rgba(255, 106, 0, 0.4); } }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
